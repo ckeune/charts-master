@@ -1,0 +1,113 @@
+figure {
+    box-shadow: $shadow;
+    border-radius: 3px;
+    background: #fefefe;
+    color: #000;
+    margin: .5rem;
+
+    .perfect__header {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+
+        &--question {
+            flex: 1 0 60%;
+            padding: 0 1rem;
+        }
+
+        &--observed {
+            flex: 1 0 10%;
+            text-align: center;
+            padding: 0 1rem;
+
+            &.wider {
+                flex: 1 0 15%;
+            }
+        }
+
+        &--relative {
+            flex: 1 0 10%;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        &--range {
+            flex: 1 0 20%;
+            text-align: center;
+            padding: 0 1rem;
+
+            &.wider {
+                flex: 1 0 25%;
+            }
+        }
+    }
+
+    .perfect__answer {
+        &--copy {
+            flex: 1 0 20%;
+            padding: 1rem;
+        }
+
+        &--split {
+            flex: 1 0 40%;
+            padding: 1rem;
+
+            div {
+                position: relative;
+
+                label {
+                    position: absolute;
+                    top: 0;
+                    margin-left: 1rem;
+                    font-weight: 300;
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        &--observed {
+            flex: 1 0 10%;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+
+            &.wider {
+                flex: 1 0 15%;
+            }
+        }
+
+        &--relative {
+            flex: 1 0 10%;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        &--range {
+            flex: 1 0 20%;
+            padding: 1rem;
+            text-align: center;
+
+            &.wider {
+                flex: 1 0 25%;
+            }
+        }
+    }
+}
+
+.progress-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: 1rem;
+    margin: .25rem;
+    background: transparent;
+    border-radius: 3px;
+}
+
+.progress-value {
+    display: block;
+    height: 100%;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 3px;
+}

@@ -1,0 +1,44 @@
+.essence {
+
+    .perfect__header, .perfect__answer--copy {
+        font-family: Raleway,sans-serif;
+    }
+
+    .control {
+        .progress-value {
+            background-color: #939598;
+        }
+    }
+    .exposed {
+        .progress-value {
+            background-color: #00adbb;
+        }
+    }
+
+    .green {
+        color: green;
+
+        .essrange {
+            &__val {
+                border: 2px solid green;
+            }
+        }
+    }
+    .orange {
+        color: orange;
+
+        .essrange {
+            &__val {
+                border: 2px solid orange;
+            }
+        }
+    }
+    .red {
+        color: #d13238;
+        .essrange {
+            &__val {
+                border: 2px solid #d13238;
+            }
+        }
+    }
+}

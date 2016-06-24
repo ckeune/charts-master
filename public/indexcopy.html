@@ -1,0 +1,79 @@
+<!doctype html>
+<html ng-app="generator">
+    <head>
+        <title>Kargo Brand Study Chart Generator</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kargo-Keune">
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+        <link href="//fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/app.min.css?v=3">
+    </head>
+    <body>
+        <header>
+            <img src="./img/kargologo.png" alt="Kargo" style="width:128px;height:56px;">
+                <div class="logo"></div>
+                <div>Kargo Master Chart Generator</div>
+
+        </header>
+        <main ng-controller="perfect" class="flex-col">
+            <div class="flex-row controls">
+                <csv-magic question="data.question" answers="data.answers"></csv-magic>
+            </div>
+
+            <div class="flex-row control-panel align-middle">
+                <div class="flex-col controls">
+                    <label>
+                        Theme
+                        <select ng-model="theme">
+                            <option value="blank">None</option>
+                            <option value="kargo">Kargo</option>
+                            <option value="sales">Sales</option>
+                            <option value="kellogg">Kellogg</option>
+                        </select>
+                    </label>
+                    <label>
+                        Width
+                        <input type="number" min="0" max="100" ng-model="width">
+                    </label>
+                    <label>
+                        Show circle label
+                        <input type="checkbox" ng-model="showCircleLabel">
+                    </label>
+                    <label>
+                        Show relative lift
+                        <input type="checkbox" ng-model="showRelative">
+                    </label>
+                </div>
+                <div class="flex-col controls">
+                    <label>
+                        Bar decimals
+                        <input type="number" ng-model="barDec">
+                    </label>
+                    <label>
+                        Observed decimals
+                        <input type="number" ng-model="observedDec">
+                    </label>
+                    <label>
+                        Relative decimals
+                        <input type="number" ng-model="relativeDec">
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-panel flex-row">
+                <a class="button" href="" ng-click="render(data.question)">Download chart</a>
+            </div>
+
+            <div id="render-me" style="width: {{width}}%">
+                <article class="{{theme}} align-middle">
+                    <perfect data="data" bar-dec="barDec" observed-dec="observedDec" relative-dec="relativeDec" show-circle-label="showCircleLabel" show-relative-lift="showRelative"></perfect>
+                </article>
+            </dib>
+        </main>
+
+        <script src="./vendor/d2i.min.js"></script>
+        <script src="./components/angular/angular.min.js"></script>
+        <script src="./js/app.min.js"></script>
+    </body>
+</html>

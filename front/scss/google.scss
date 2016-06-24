@@ -1,0 +1,60 @@
+.google {
+    .control {
+        .progress-value {
+            background-color: #ddd;
+        }
+    }
+    .exposed {
+        .progress-value {
+            background-color: #4285f4;
+        }
+    }
+
+    .perfect__header {
+        background-color: #5f6165;
+        color: white;
+        border-bottom: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .perfect__answer {
+        //background: linear-gradient(to right, #5f6165 0%,#5f6165 20%, #ffffff 20%, #ffffff 60%,#d9d9d9 60%,#d9d9d9 100%);
+        background: linear-gradient(to right, #5f6165 0%,#5f6165 20%, #ffffff 20%, #ffffff 60%,#ececec 60%,#ededed 100%);
+
+        &--copy {
+            color: white;
+
+            &:last-child {
+                border-bottom-left-radius: 3px;
+            }
+        }
+    }
+
+    .green {
+        color: #0f9d58;
+
+        .essrange {
+            &__val {
+                border: 2px solid #0f9d58;
+            }
+        }
+    }
+    .orange {
+        color: #f4b400;
+
+        .essrange {
+            &__val {
+                border: 2px solid #f4b400;
+            }
+        }
+    }
+    .red {
+        color: #db4437;
+        .essrange {
+            &__val {
+                border: 2px solid #db4437;
+            }
+        }
+    }
+}
